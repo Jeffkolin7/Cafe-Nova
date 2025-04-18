@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffb06f;
+}
+
+.header {
+    background: linear-gradient(to bottom, rgb(87, 38, 5), #ffb06f) ;
+    color: white;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+#Coffee{
+    cursor:pointer;
+    font-family: sofia, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    transition: color 0.3s;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+#Coffee:hover{
+    color: #9c4f0f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    flex-wrap: wrap;
+    text-shadow: 7px 5px 10px black;
+}
+
+@media only screen and (max-width: 583px) {
+    .nav-links {
+        margin-top: 10px;
+    }
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-links a:hover {
+    color: #9c4f0f;
+    text-shadow: 3px 3px 3px wheat;
+}
+
+.main{
+    max-width:  500px;
+    margin: 25px 50px;
+    height: 500px;
+    background-color: #412107b9;
+}
+
+/*Main*/
+
+#title{
+    font-family: "Sofia", sans-serif;
+    color: #412107b9;
+    font-weight: bold;
+    font-size: 2rem;
+}
