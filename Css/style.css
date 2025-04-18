@@ -68,20 +68,44 @@ body {
     text-shadow: 3px 3px 3px wheat;
 }
 
+
+/*Main*/    
+
 .main{
-    max-width:  500px;
+    max-width:  650px;
     margin: 25px 50px;
     height: 500px;
     background-color: #412107b9;
 }
 
-/*Main*/
 
 #title{
-    font-family: "Trirong","Sofia", sans-serif;
     color: wheat;
     font-weight: bold;
-    font-size: 2.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: left; /* or left, depending on the look */
+}
+
+@media screen and (min-width: 601px) {
+    #title {
+        font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #title {
+      font-size: 25px;
+    }
+  }
+
+#desc{
+    font-family: "Trirong","Sofia", sans-serif; 
+    color: wheat;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    padding: 10px 20px;
+    line-height: 1.6;
 }
