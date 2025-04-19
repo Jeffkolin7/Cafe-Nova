@@ -4,35 +4,37 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
+    <title>Café Nova | Home</title>
     <link rel="stylesheet" href="Css/style.css" />
     <link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Amarante">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="shortcut icon" href="/Images/main.png" type="image/x-icon">
 </head>
-
+ 
 <body>
     <!--Header Section-->
     <header class="header">
         <div class="top">
-            <h2 id="Coffee">Café Nova<img src="Images/main.png" width="50" height="50"></h2>
+            <h2 id="Coffee">Café Nova<img src="Images/main.png" width="50" height="50"></h2> 
             <nav>
                 <ul class="nav-links">
                     <li><a href="#main_click">Home</a></li>
                     <li><a href="#main_click2">About</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="#menu">Menu</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="box" id="main_click">
+    <div class="box" >
         <div class="main">
             <h2 id="title">Enjoy The Most <br> Delicious Coffee</h2>
+            <p id="main_click"></p>
             <h3 id="desc">Not your average cup. We roast bold flavors for bold people. Wake up and taste the difference.
             </h3>
-            <button class="buy-btn">BUY NOW</button>
+            <button class="buy-btn" >BUY NOW</button>
         </div>
         <div class="main_right">
             <img src="Images/main1.png" alt="Coffee" />
@@ -40,7 +42,7 @@
     </div>
     <div class="box2" id="main_click2">
         <div class="main2-right">
-            <img src="Images/barista.png" alt="Barista making coffee" />
+            <img  id="main_click" src="Images/barista.png" alt="Barista making coffee" />
         </div>
         <div class="main2-left">
             <h2 id="title2">About Us</h2>
@@ -53,20 +55,12 @@
                 single cup. Whether you're into bold espressos, creamy lattes, or just a simple black coffee — we've got
                 you.
                 <br><br>
-                <span style="color: #442105;">Come for the coffee. Stay for the vibe.</span>
+                <span style="color: #914100;">Come for the coffee. Stay for the vibe.</span>
             </p>
         </div>
     </div>
     <div class="box3" id="menu">
-        <div class="menu-left">
-            <h2 class="menu-title">Our Menu</h2>
-            <p class="menu-desc">
-                Crafted with care, brewed with passion. Whether you like it strong, sweet, creamy, or classic — we’ve got a cup with your name on it.
-                <br><br>
-                Take a look at some of our favorites below.
-            </p>
-        </div>
-        <div class="menu-right">
+        <div class="menu-right" id="main_click3">
             <div class="menu-item">
                 <img src="Images/esp.png" alt="Espresso">
                 <h3>Espresso</h3>
@@ -85,6 +79,14 @@
                 <p>Espresso with a rich chocolate twist.</p>
                 <span>₱150</span>
             </div>
+        </div>
+        <div class="menu-left">
+            <h2 class="menu-title">Our Menu</h2>
+            <p class="menu-desc">
+                Crafted with care, brewed with passion. Whether you like it<span style="color: #914100;"> strong</span>,<span style="color: #914100;"> sweet</span>, <span style="color: #914100;">creamy</span>, or <span style="color: #914100;">classic </span> — we’ve got a cup with your name on it.
+                <br><br>
+                Take a look at some of our Populars coffee in the left side.
+            </p>
         </div>
     </div>
     <script src="main.js"></script>
