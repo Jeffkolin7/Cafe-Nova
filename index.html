@@ -18,8 +18,8 @@
             <h2 id="Coffee">Café Nova ☕</h2>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#main_click">Home</a></li>
+                    <li><a href="#main_click2">About</a></li>
                     <li><a href="#">Menu</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
@@ -27,22 +27,66 @@
             </nav>
         </div>
     </header>
-    <div class="box">
+    <div class="box" id="main_click">
         <div class="main">
             <h2 id="title">Enjoy The Most <br> Delicious Coffee</h2>
-            <h3 id="desc">Not your average cup. We roast bold flavors for bold people. Wake up and taste the difference.</h3>
+            <h3 id="desc">Not your average cup. We roast bold flavors for bold people. Wake up and taste the difference.
+            </h3>
+            <button class="buy-btn">BUY NOW</button>
         </div>
         <div class="main_right">
-            <img src="Images/main1.png" alt="Coffee">
+            <img src="Images/main1.png" alt="Coffee" />
         </div>
-    </div>    
-    <div class="box2">
-        <div class="main2">
+    </div>
+    <div class="box2" id="main_click2">
+        <div class="main2-right">
+            <img src="Images/barista.png" alt="Barista making coffee" />
+        </div>
+        <div class="main2-left">
             <h2 id="title2">About Us</h2>
-            <h3 id="desc2">We’re passionate about coffee. Our goal is to bring you fresh, high-quality coffee that tastes as good as it smells. Whether you’re here for your daily caffeine fix or just exploring new brews, we’re happy to have you.</h3>
+            <p id="desc2">
+                At <span style="color: #442105;">Café Nova</span>, coffee isn't just a drink — it's an experience. What
+                started as a small passion project quickly grew into a cozy space for coffee lovers to gather, connect,
+                and enjoy the finest brews.
+                <br><br>
+                We hand-select our beans from sustainable farms, roast them to perfection, and pour love into every
+                single cup. Whether you're into bold espressos, creamy lattes, or just a simple black coffee — we've got
+                you.
+                <br><br>
+                <span style="color: #442105;">Come for the coffee. Stay for the vibe.</span>
+            </p>
+        </div>
+    </div>
+    <div class="box3" id="menu">
+        <div class="menu-left">
+            <h2 class="menu-title">Our Menu</h2>
+            <p class="menu-desc">
+                Crafted with care, brewed with passion. Whether you like it strong, sweet, creamy, or classic — we’ve got a cup with your name on it.
+                <br><br>
+                Take a look at some of our favorites below.
+            </p>
+        </div>
+        <div class="menu-right">
+            <div class="menu-item">
+                <img src="Images/espresso.png" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Bold and concentrated, straight from the bean.</p>
+                <span>₱110</span>
+            </div>
+            <div class="menu-item">
+                <img src="Images/latte.png" alt="Latte">
+                <h3>Latte</h3>
+                <p>Smooth, creamy, and a customer favorite.</p>
+                <span>₱140</span>
+            </div>
+            <div class="menu-item">
+                <img src="Images/mocha.png" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Espresso with a rich chocolate twist.</p>
+                <span>₱150</span>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
 </body>
-
 </html>

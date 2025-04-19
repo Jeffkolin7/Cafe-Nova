@@ -10,13 +10,18 @@
         cursor: url("../Images/auto.png"), auto;
     }
 
-    .header {
+    html {
+        scroll-behavior: smooth;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
         background: linear-gradient(to bottom, rgb(228, 148, 96), #422106);
-        /*#ffb06f*/
         color: white;
         padding: 20px;
         width: 100%;
-
     }
 
     .top {
@@ -111,14 +116,51 @@
         border-radius: 15px;
     }
 
+    .buy-btn {
+        background-color: #9c4f0f;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        margin-top: 380px; /* matches position in your layout */
+        margin-left: 100px;
+        cursor: url("../Images/click.png"), pointer;
+        font-family: 'Trirong', serif;
+        letter-spacing: 1px;
+        animation: pulse 2s infinite;
+    }
+    
+    .buy-btn:hover {
+        background-color: #d37530;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .buy-btn:active {
+        transform: scale(0.96);
+        cursor: url("../Images/clickna.png"), pointer;
+    }
+
+
+    @keyframes pulse {
+        0% { transform: scale(1);}
+        50% { transform: scale(1.06); }
+        100% { transform: scale(1); }
+    }
+    
     #title {
         color: wheat;
         font-weight: bold;
         display: flex;
         position: absolute;
-        top: 150px;
+        font-family: 'Sofia','Arial';
+        top: 110px;
         left: 100px;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         max-width: 500px;
     }
 
@@ -188,4 +230,130 @@
         flex-wrap: wrap;
     }
 
+    .main2-left {
+        flex: 1;
+        padding: 20px;
+        color: wheat;
+        font-family: 'Trirong', serif;
+    }
+
+    .main2-right {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main2-right img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 1s;
+    }
+
+    .main2-right img:hover {
+        transform: scale(1.05);
+    }
+
+    #title2 {
+        font-size: 2.2rem;
+        margin-top: 30px;
+        font-family: 'Sofia','Arial';
+    }
+
+    #desc2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+        line-height: 1.8;
+        color: #f5deb3;
+    }
+
+    .box3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1300px;
+        margin: 50px auto;
+        padding: 20px;
+        background: linear-gradient(to top, rgb(82, 43, 6), rgb(255, 173, 96));
+        border-radius: 30px;
+    }
+    
+    /* Text section */
+    .menu-left {
+        flex: 1;
+        padding: 20px;
+        color: wheat;
+        font-family: 'Trirong', serif;
+    }
+    
+    .menu-title {
+        font-size: 2.2rem;
+        margin-top: 30px;
+        font-family: 'Sofia','Arial';
+    }
+    
+    .menu-desc {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+        line-height: 1.8;
+        color: #f5deb3;
+    }
+    
+    /* Menu items section */
+    .menu-right {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Individual menu item */
+    .menu-item {
+        background-color: rgba(230, 175, 123, 0.95);
+        border-radius: 20px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .menu-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+    
+    .menu-item h3 {
+        font-size: 1.4rem;
+        color: #422106;
+        font-family: 'Trirong', serif;
+    }
+    
+    .menu-item p {
+        font-size: 0.95rem;
+        color: #333;
+        margin: 10px 0;
+    }
+    
+    .menu-item span {
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #9c4f0f;
+    }
     
