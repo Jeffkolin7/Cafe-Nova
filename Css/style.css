@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(to bottom, rgb(87, 38, 5), #ffb06f) ;
+    background: linear-gradient(to bottom, rgb(87, 38, 5), #ffb06f);
     color: white;
     padding: 20px;
     width: 100%;
@@ -27,8 +27,8 @@ body {
     flex-shrink: 1;
 }
 
-#Coffee{
-    cursor:pointer;
+#Coffee {
+    cursor: pointer;
     font-family: sofia, sans-serif;
     font-weight: bold;
     font-size: 2em;
@@ -37,7 +37,7 @@ body {
 }
 
 
-#Coffee:hover{
+#Coffee:hover {
     color: #9c4f0f;
 }
 
@@ -46,7 +46,7 @@ body {
     gap: 35px;
     list-style: none;
     flex-wrap: wrap;
-    text-shadow: 7px 5px 10px black;
+    text-shadow: 3px 3px 5px black;
 }
 
 @media only screen and (max-width: 583px) {
@@ -54,6 +54,7 @@ body {
         margin-top: 10px;
     }
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -65,47 +66,81 @@ body {
 
 .nav-links a:hover {
     color: #9c4f0f;
-    text-shadow: 3px 3px 3px wheat;
 }
 
+.nav-links a:active {
+    color: #9c4f0f;
+}
 
-/*Main*/    
+/*Main*/
 
-.main{
-    max-width:  650px;
+.main {
+    max-width: 650px;
     margin: 25px 50px;
+    /* stays on the left */
     height: 500px;
     background-color: #412107b9;
+    position: relative;
 }
 
-
-#title{
+#title {
     color: wheat;
     font-weight: bold;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left; /* or left, depending on the look */
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    font-size: 2.5rem;
+    max-width: 500px;
 }
 
 @media screen and (min-width: 601px) {
     #title {
         font-size: 2.5rem;
     }
-  }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     #title {
-      font-size: 25px;
+        font-size: 25px;
     }
-  }
+}
 
-#desc{
-    font-family: "Trirong","Sofia", sans-serif; 
+
+
+#desc {
+    font-family: "Trirong", "Sofia", sans-serif;
     color: wheat;
-    display: flex;
-    text-align: left;
-    justify-content: center;
-    padding: 10px 20px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
     line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+#desc {
+    font-family: "Trirong", "Sofia", sans-serif;
+    color: wheat;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 650px) {
+    #title {
+        font-size: 25px;
+        left: 20px;
+        max-width: 90%;
+    }
+
+    #desc {
+        font-size: 15px;
+        top: 220px;
+        left: 20px;
+        max-width: 90%;
+    }
 }
