@@ -6,11 +6,11 @@
 }
 
 body {
-    background-color: #ffb06f;
+    background-color: #422106;
 }
 
 .header {
-    background: linear-gradient(to bottom, rgb(87, 38, 5), #ffb06f);
+    background: linear-gradient(to bottom, rgb(228, 148, 96) , #422106);  /*#ffb06f*/
     color: white;
     padding: 20px;
     width: 100%;
@@ -25,6 +25,12 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     flex-shrink: 1;
+}
+
+@media only screen and (max-width: 1013px) {
+    .top{
+        flex-direction: column;
+    }
 }
 
 #Coffee {
@@ -75,23 +81,25 @@ body {
 /*Main*/
 
 .box {
-    width: 100%; /* Take up the full width of the container */
-    max-width: 1300px; /* Limit the width for large screens */
-    margin: 0 auto; /* Center the box */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: red;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(10deg, rgb(82, 43, 6), rgb(255, 173, 96));
+    border-radius: 30px;    
+    flex-wrap: wrap;
 }
 
 
 .main {
-    max-width: 650px;
+    flex: 1;
     margin: 25px 10px;
-    /* stays on the left */
     height: 500px;
-    background-color: #412107b9;
     position: relative;
+    border-radius: 15px;
 }
 
 #title {
@@ -121,7 +129,7 @@ body {
 
 #desc {
     font-family: "Trirong", "Sofia", sans-serif;
-    color: wheat;
+    color: rgb(255, 0, 0);
     position: absolute;
     top: 250px;
     left: 100px;
@@ -156,22 +164,15 @@ body {
     }
 }
 
-.main_right{
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    position: absolute;
-    top: 150px;
-    right: 450px;
+.main_right {
+    width: 550px;
+    height: 550px;
+    margin-top: 25px; /* Optional spacing from .main */
 }
 
-
-/*
 
 .main_right img{
-    width: 650px;
-    height: 550px;
+    width: 100%;
+    height: 100%;
     background: transparent;
 }
-
-*/
