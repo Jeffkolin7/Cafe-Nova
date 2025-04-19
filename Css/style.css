@@ -58,7 +58,7 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
     transition: color 0.3s;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -74,9 +74,20 @@ body {
 
 /*Main*/
 
+.box {
+    width: 100%; /* Take up the full width of the container */
+    max-width: 1300px; /* Limit the width for large screens */
+    margin: 0 auto; /* Center the box */
+    padding: 20px;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
 .main {
     max-width: 650px;
-    margin: 25px 50px;
+    margin: 25px 10px;
     /* stays on the left */
     height: 500px;
     background-color: #412107b9;
@@ -144,3 +155,23 @@ body {
         max-width: 90%;
     }
 }
+
+.main_right{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 150px;
+    right: 450px;
+}
+
+
+/*
+
+.main_right img{
+    width: 650px;
+    height: 550px;
+    background: transparent;
+}
+
+*/
