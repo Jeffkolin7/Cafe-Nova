@@ -1,360 +1,399 @@
-     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    body {
-        background-color: #422106;
-        cursor: url("../Images/auto.png"), auto;
-    }
+body {
+    background-color: #422106;
+    cursor: url("../Images/auto.png"), auto;
+}
 
-    html {
-        scroll-behavior: smooth;
-      }
+html {
+    scroll-behavior: smooth;
+}
 
-      .header {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background: linear-gradient(to bottom, rgb(228, 148, 96), #422106);
-        color: white;
-        padding: 5px;
-        width: 100%;
-    }
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgb(228, 148, 96), #422106);
+    color: white;
+    padding: 5px;
+    width: 100%;
+}
 
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1013px) {
     .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        flex-shrink: 1;
+        flex-direction: column;
     }
+}
 
-    @media only screen and (max-width: 1013px) {
-        .top {
-            flex-direction: column;
-        }
-    }
+#Coffee {
+    font-family: sofia, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    transition: color 0.3s;
+    text-shadow: 3px 3px 3px black;
+}
 
-    #Coffee {
-        font-family: sofia, sans-serif;
-        font-weight: bold;
-        font-size: 2em;
-        transition: color 0.3s;
-        text-shadow: 3px 3px 3px black;
-    }
+#Coffee:hover {
+    color: #9c4f0f;
+    cursor: url("../Images/click.png"), pointer;
+}
 
+#Coffee:active {
+    cursor: url("../Images/clickna.png"), pointer;
+}
 
-    #Coffee:hover {
-        color: #9c4f0f;
-        cursor: url("../Images/click.png"), pointer;
-    }
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    flex-wrap: wrap;
+    text-shadow: 3px 3px 5px black;
+}
 
-    #Coffee:active {
-        cursor: url("../Images/clickna.png"), pointer;
-    }
-
+@media only screen and (max-width: 583px) {
     .nav-links {
-        display: flex;
-        gap: 35px;
-        list-style: none;
-        flex-wrap: wrap;
-        text-shadow: 3px 3px 5px black;
+        margin-top: 10px;
+        justify-content: center; /* Center nav links on smaller screens */
+    }
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-links a:hover {
+    color: #9c4f0f;
+    cursor: url("../Images/click.png"), pointer;
+}
+
+.nav-links a:active {
+    color: #9c4f0f;
+    cursor: url("../Images/clickna.png"), pointer;
+}
+
+/* Main */
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(10deg, rgb(82, 43, 6), rgb(255, 173, 96));
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+.main {
+    flex: 1;
+    margin: 25px 10px;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 110px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    text-align: center; /* Center text */
+}
+
+#title {
+    color: wheat;
+    font-weight: bold;
+    font-family: 'Sofia', 'Arial';
+    font-size: 2.2rem;
+    max-width: 90%; /* Make it responsive */
+    margin-bottom: 10px; /* Space below title */
+}
+
+#desc {
+    color: rgb(65, 40, 2);
+    line-height: 1.6;
+    font-size: 1.2rem; /* Use relative size */
+    max-width: 90%; /* Make it responsive */
+    margin-bottom: 20px; /* Space below description */
+}
+
+.buy-btn {
+    background-color: #9c4f0f;
+    color: white;
+    font-size: 1rem; /* Use relative size */
+    font-weight: bold;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: url("../Images/click.png"), pointer;
+    font-family: 'Trirong', serif;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+.buy-btn:hover {
+    background-color: #d37530;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.buy-btn:active {
+    transform: scale(0.96);
+    cursor: url("../Images/clickna.png"), pointer;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 1.8rem; /* Smaller font size for mobile */
     }
 
-    @media only screen and (max-width: 583px) {
-        .nav-links {
-            margin-top: 10px;
-        }
-    }
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 17px;
-        transition: color 0.3s;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    .nav-links a:hover {
-        color: #9c4f0f;
-        cursor: url("../Images/click.png"), pointer;
-    }
-
-    .nav-links a:active {
-        color: #9c4f0f;
-        cursor: url("../Images/clickna.png"), pointer;
-
-    }
-
-    /*Main*/
-
-    .box {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 1300px;
-        margin: 50px auto;
-        padding: 20px;
-        background: linear-gradient(10deg, rgb(82, 43, 6), rgb(255, 173, 96));
-        border-radius: 30px;
-        flex-wrap: wrap;
-    }
-
-
-    .main {
-        flex: 1;
-        margin: 25px 10px;
-        height: 500px;
-        position: relative;
-        border-radius: 15px;
+    #desc {
+        font-size: 1rem; /* Smaller font size for mobile */
     }
 
     .buy-btn {
-        background-color: #9c4f0f;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 14px 30px;
-        border: none;
-        border-radius: 30px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        margin-top: 380px; /* matches position in your layout */
-        margin-left: 100px;
-        cursor: url("../Images/click.png"), pointer;
-        font-family: 'Trirong', serif;
-        letter-spacing: 1px;
-        animation: pulse 2s infinite;
+        font-size: 0.9rem; /* Smaller button text for mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
     }
-    
-    .buy-btn:hover {
-        background-color: #d37530;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .buy-btn:active {
-        transform: scale(0.96);
-        cursor: url("../Images/clickna.png"), pointer;
-    }
+}
 
-
-    @keyframes pulse {
-        0% { transform: scale(1);}
-        50% { transform: scale(1.06); }
-        100% { transform: scale(1); }
-    }
-    
+@media screen and (max-width: 480px) {
     #title {
-        color: wheat;
-        font-weight: bold;
-        display: flex;
-        position: absolute;
-        font-family: 'Sofia','Arial';
-        top: 110px;
-        left: 100px;
-        font-size: 2.2rem;
-        max-width: 500px;
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
     }
-
-    @media screen and (min-width: 601px) {
-        #title {
-            font-size: 2.5rem;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        #title {
-            font-size: 25px;
-        }
-    }
-
-
 
     #desc {
-        color: rgb(65, 40, 2);
-        position: absolute;
-        top: 250px;
-        left: 100px;
-        line-height: 1.6;
-        font-size: 18px;
-        max-width: 500px;
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
     }
 
-    @media screen and (max-width: 650px) {
-        #title {
-            font-size: 25px;
-            left: 20px;
-            max-width: 90%;
-        }
-
-        #desc {
-            font-size: 15px;
-            top: 220px;
-            left: 20px;
-            max-width: 90%;
-        }
+    .buy-btn {
+        font-size: 0.8rem; /* Even smaller button text for very small screens */
+        padding: 8px 16px; /* Adjust padding for very small screens */
     }
+}
+.main_right {
+    flex: 1; /* Allow it to grow and shrink */
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    margin-top: 25px;
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center the image horizontally */
+}
 
-    .main_right {
-        width: 550px;
-        height: 550px;
-        margin-top: 25px;
-        /* Optional spacing from .main */
-    }
+.main_right img {
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Set a max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 20px; /* Keep the border radius */
+}
 
-
+@media screen and (max-width: 768px) {
     .main_right img {
-        width: 100%;
-        height: 100%;
-        background: transparent;
+        max-width: 90%; /* Allow more flexibility on smaller screens */
+    }
+}
+
+.box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(82, 43, 6), rgb(255, 173, 96));
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+.main2-left {
+    flex: 1;
+    padding: 20px;
+    color: wheat;
+    font-family: 'Trirong', serif;
+}
+
+.main2-right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main2-right img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 1s;
+}
+
+.main2-right img:hover {
+    transform: scale(1.05);
+}
+
+#title2 {
+    font-size: 2.2rem;
+    margin-top: 30px;
+    font-family: 'Sofia','Arial';
+}
+
+#desc2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    line-height: 1.8;
+    color: #f5deb3;
+}
+
+.box3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to top, rgb(82, 43, 6), rgb(255, 173, 96));
+    border-radius: 30px;
+}
+
+.menu-left {
+    flex: 1;
+    padding: 20px;
+    color: wheat;
+    padding-bottom: 150px;
+    font-family: 'Trirong', serif;
+}
+
+.menu-title {
+    font-size: 2.2rem;
+    margin-top: 30px;
+    font-family: 'Sofia','Arial';
+}
+
+.menu-desc {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    line-height: 1.8;
+    color: #f5deb3;
+}
+
+.menu-right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: rgba(230, 175, 123, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.4rem;
+    color: #422106;
+    font-family: 'Trirong', serif;
+}
+
+ .menu-item p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.menu-item span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #9c4f0f;
+}
+
+@media screen and (max-width: 768px) {
+    .box, .box2, .box3 {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center; /* Center align items */
     }
 
-    .box2 {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 20px;
-        background: linear-gradient(to bottom, rgb(82, 43, 6), rgb(255, 173, 96));
-        border-radius: 30px;
-        flex-wrap: wrap;
+    .main, .main2-left, .main2-right, .menu-left, .menu-right {
+        width: 100%; /* Full width for main sections */
+        margin: 0; /* Remove margins */
     }
 
-    .main2-left {
-        flex: 1;
-        padding: 20px;
-        color: wheat;
-        font-family: 'Trirong', serif;
+    .buy-btn {
+        margin-left: 0; /* Center button on smaller screens */
+        margin-top: 20px; /* Adjust top margin */
     }
 
-    .main2-right {
-        flex: 1;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main2-right img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 20px;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-        transition: transform 1s;
-    }
-
-    .main2-right img:hover {
-        transform: scale(1.05);
-    }
-
-    #title2 {
-        font-size: 2.2rem;
-        margin-top: 30px;
-        font-family: 'Sofia','Arial';
-    }
-
-    #desc2 {
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 15px;
-        line-height: 1.8;
-        color: #f5deb3;
-    }
-
-    .box3 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1300px;
-        margin: 50px auto;
-        padding: 20px;
-        background: linear-gradient(to top, rgb(82, 43, 6), rgb(255, 173, 96));
-        border-radius: 30px;
-    }
-    
-    /* Text section */
-    .menu-left {
-        flex: 1;
-        padding: 20px;
-        color: wheat;
-        padding-bottom: 150px;
-        font-family: 'Trirong', serif;
-    }
-    
-    .menu-title {
-        font-size: 2.2rem;
-        margin-top: 30px;
-        font-family: 'Sofia','Arial';
-    }
-    
-    .menu-desc {
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 15px;
-        line-height: 1.8;
-        color: #f5deb3;
-    }
-    
-    /* Menu items section */
-    .menu-right {
-        flex: 1;
-        padding: 20px;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* Individual menu item */
     .menu-item {
-        background-color: rgba(230, 175, 123, 0.95);
-        border-radius: 20px;
-        padding: 20px;
-        width: 250px;
-        text-align: center;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease;
+        width: 90%; /* Make menu items responsive */
+        max-width: 300px; /* Limit max width */
     }
-    
-    .menu-item:hover {
-        transform: translateY(-5px);
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 10px; /* Reduce gap between links */
     }
-    
-    .menu-item img {
-        width: 140px;
-        height: 140px;
-        object-fit: contain;
-        margin-bottom: 15px;
+
+    .nav-links a {
+        font-size: 15px; /* Adjust font size for smaller screens */
     }
-    
-    .menu-item h3 {
-        font-size: 1.4rem;
-        color: #422106;
-        font-family: 'Trirong', serif;
+
+    #title, #title2 {
+        font-size: 1.8rem; /* Smaller title font size */
     }
-    
-    .menu-item p {
-        font-size: 0.95rem;
-        color: #333;
-        margin: 10px 0;
+
+    #desc, #desc2 {
+        font-size: 14px; /* Smaller description font size */
     }
-    
-    .menu-item span {
-        display: block;
-        font-weight: bold;
-        font-size: 1.1rem;
-        color: #9c4f0f;
-    }
-    
+}
